@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:taj_wa9ar/src/authentication/forget_password.dart';
 import 'package:taj_wa9ar/src/authentication/login_view.dart';
+import 'package:taj_wa9ar/src/authentication/register_view.dart';
+import 'package:taj_wa9ar/src/authentication/user_view.dart';
 
 import 'sample_feature/sample_item_details_view.dart';
 import 'sample_feature/sample_item_list_view.dart';
@@ -75,8 +78,15 @@ class MyApp extends StatelessWidget {
                       case LoginView.routeName:
                     return const LoginView();
                   case SampleItemListView.routeName:
+                                      return const SampleItemListView();
+                  case RegisterView.routeName:
+                  return const RegisterView();
+                  case ForgetPasswordView.routeName:
+                  return const ForgetPasswordView();
+                  case UserView.routeName:
+                  return const UserView();
                   default:
-                    return const SampleItemListView();
+                    return const LoginView();
                 }
               },
             );
